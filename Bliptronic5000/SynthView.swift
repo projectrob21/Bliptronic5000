@@ -22,6 +22,8 @@ class SynthView: UIView {
     var columnStackView8 = UIStackView()
     
     var horizontalStackView = UIStackView()
+    
+    let blipSpacing: CGFloat = 5
 
     
     // MARK: Initialization
@@ -41,25 +43,25 @@ class SynthView: UIView {
     
     func configure() {
         horizontalStackView.axis = .horizontal
-        horizontalStackView.distribution = .equalCentering
-        horizontalStackView.isLayoutMarginsRelativeArrangement = true
+        horizontalStackView.distribution = .fillEqually
+        horizontalStackView.spacing = blipSpacing
+
         
         let stackviewArray = [columnStackView1, columnStackView2, columnStackView3, columnStackView4, columnStackView5, columnStackView6, columnStackView7, columnStackView8]
         
         var columnCounter = 1
         for column in stackviewArray {
             column.axis = .vertical
-            column.distribution = .equalCentering
-            column.isLayoutMarginsRelativeArrangement = true
-
+            column.distribution = .fillEqually
+            column.spacing = blipSpacing
+            
             
             var rowCounter = 1
             for _ in 1...8 {
                 
                 let blipView = BlipView(column: columnCounter, row: rowCounter)
-                blipView.snp.makeConstraints {
-                    $0.height.equalTo(blipView.snp.width)
-                }
+
+                
                 blipView.backgroundColor = UIColor().generateRandomColor()
                 
                 column.addArrangedSubview(blipView)
@@ -70,21 +72,17 @@ class SynthView: UIView {
             horizontalStackView.addArrangedSubview(column)
             column.snp.makeConstraints {
                 $0.height.equalToSuperview()
-                $0.width.equalToSuperview().dividedBy(8)
             }
             columnCounter += 1
         }
     }
     
     func constrain() {
-//        addSubview(columnStackView1)
-//        columnStackView1.snp.makeConstraints {
-//            $0.leading.top.bottom.equalToSuperview()
-//            $0.width.equalToSuperview().dividedBy(8)
-//        }
+
         addSubview(horizontalStackView)
         horizontalStackView.snp.makeConstraints {
-            $0.centerX.centerY.height.width.equalToSuperview()
+            $0.centerX.centerY.height.equalToSuperview()
+            $0.width.equalToSuperview().offset(blipSpacing * -2)
         }
         
     }

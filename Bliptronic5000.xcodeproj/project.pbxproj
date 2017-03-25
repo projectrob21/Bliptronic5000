@@ -109,7 +109,6 @@
 		E833DF1B1E0DD586006438C4 /* Bliptronic5000 */ = {
 			isa = PBXGroup;
 			children = (
-				E833DF1C1E0DD586006438C4 /* AppDelegate.swift */,
 				E8EDEC441E86E06D00E8A4C4 /* Model */,
 				E8EDEC411E86E05900E8A4C4 /* View */,
 				E8EDEC4B1E86E63E00E8A4C4 /* Controllers */,
@@ -151,6 +150,7 @@
 		E8EDEC4B1E86E63E00E8A4C4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E833DF1C1E0DD586006438C4 /* AppDelegate.swift */,
 				E833DF1E1E0DD586006438C4 /* MainViewController.swift */,
 			);
 			name = Controllers;
