@@ -42,8 +42,10 @@ extension BlipView {
         
         if blip.isActive {
             print("Blip in column \(blip.column) row \(blip.row) was activated!")
+            blip.noteOn()
         } else {
             print("Blip in column \(blip.column) row \(blip.row) was de-activated!")
+            blip.noteOff()
         }
         
     }

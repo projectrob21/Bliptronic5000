@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AudioKit
 
 struct Blip {
     
@@ -14,10 +15,53 @@ struct Blip {
     var column: Int
     var row: Int
     
+    let square = AKTable(.square, count: 16)
+    
+    var oscillator: AKOscillator!
+    
+    var currentMIDINote = 0
+    var currentAmplitude = 0.2
+    var currentRampTime = 0.05
+    
     init(column: Int, row: Int) {
         isActive = false
         self.row = row
         self.column = column
         
+        if row == 1 && column == 1 {
+            oscillator = AKOscillator()
+            AudioKit.output = oscillator
+            AudioKit.start()
+        }
     }
+    
+    
+    
+    
+    mutating func makeOscillator() {
+        
+        
+        oscillator = AKOscillator(waveform: square)
+        
+        AudioKit.output = oscillator
+        AudioKit.start()
+        
+        
+        oscillator.rampTime = currentRampTime
+        oscillator.amplitude = currentAmplitude
+        
+    }
+    
+    func noteOn() {
+        oscillator.rampTime = currentRampTime
+        oscillator.amplitude = currentAmplitude
+        oscillator.play()
+    }
+    
+    func noteOff() {
+        oscillator.amplitude = 0
+        oscillator.stop()
+    }
+    
 }
+

@@ -113,7 +113,6 @@
 				E8EDEC411E86E05900E8A4C4 /* View */,
 				E8EDEC4B1E86E63E00E8A4C4 /* Controllers */,
 				E833DF231E0DD586006438C4 /* Assets.xcassets */,
-				E833DF251E0DD586006438C4 /* LaunchScreen.storyboard */,
 				E833DF281E0DD586006438C4 /* Info.plist */,
 				E8EDEC491E86E4F600E8A4C4 /* Colors.swift */,
 			);
@@ -135,6 +134,7 @@
 				E8EDEC471E86E41100E8A4C4 /* BlipView.swift */,
 				E8EDEC451E86E0E800E8A4C4 /* SynthView.swift */,
 				E833DF3E1E0DD5D8006438C4 /* MainScreenView.swift */,
+				E833DF251E0DD586006438C4 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
