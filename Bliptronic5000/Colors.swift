@@ -11,9 +11,9 @@ import UIKit
 
 extension UIColor {
     
-    public static let blipActive = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0)
+    public static let blipActive = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
     
-    public static let blipInactive = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0)
+    public static let blipInactive = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     
     func generateRandomColor() -> UIColor {
         let red = Double(arc4random_uniform(256))

@@ -62,7 +62,7 @@ class SynthView: UIView {
                 let blipView = BlipView(column: columnCounter, row: rowCounter)
 
                 
-                blipView.backgroundColor = UIColor().generateRandomColor()
+//                blipView.backgroundColor = UIColor().generateRandomColor()
                 
                 column.addArrangedSubview(blipView)
 

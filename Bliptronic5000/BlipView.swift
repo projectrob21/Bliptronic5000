@@ -30,6 +30,12 @@ class BlipView: UIView {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(isTapped))
         
         self.addGestureRecognizer(gesture)
+        
+        if blip.isActive {
+            backgroundColor = UIColor.blipActive
+        } else {
+            backgroundColor = UIColor.blipInactive
+        }
     }
     
     
@@ -42,9 +48,12 @@ extension BlipView {
         
         if blip.isActive {
             print("Blip in column \(blip.column) row \(blip.row) was activated!")
+            backgroundColor = UIColor.blipActive
             blip.noteOn()
         } else {
             print("Blip in column \(blip.column) row \(blip.row) was de-activated!")
+            backgroundColor = UIColor.blipInactive
+
             blip.noteOff()
         }
         
