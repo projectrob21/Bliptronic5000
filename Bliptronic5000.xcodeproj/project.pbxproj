@@ -13,7 +13,11 @@
 		E833DF241E0DD586006438C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E833DF231E0DD586006438C4 /* Assets.xcassets */; };
 		E833DF271E0DD586006438C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E833DF251E0DD586006438C4 /* LaunchScreen.storyboard */; };
 		E833DF321E0DD586006438C4 /* Bliptronic5000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E833DF311E0DD586006438C4 /* Bliptronic5000Tests.swift */; };
-		E833DF3F1E0DD5D8006438C4 /* BlipPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E833DF3E1E0DD5D8006438C4 /* BlipPadView.swift */; };
+		E833DF3F1E0DD5D8006438C4 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E833DF3E1E0DD5D8006438C4 /* MainScreenView.swift */; };
+		E8EDEC431E86E06900E8A4C4 /* Blip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDEC421E86E06900E8A4C4 /* Blip.swift */; };
+		E8EDEC461E86E0E800E8A4C4 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDEC451E86E0E800E8A4C4 /* SynthView.swift */; };
+		E8EDEC481E86E41100E8A4C4 /* BlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDEC471E86E41100E8A4C4 /* BlipView.swift */; };
+		E8EDEC4A1E86E4F600E8A4C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDEC491E86E4F600E8A4C4 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,11 @@
 		E833DF2D1E0DD586006438C4 /* Bliptronic5000Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bliptronic5000Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E833DF311E0DD586006438C4 /* Bliptronic5000Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bliptronic5000Tests.swift; sourceTree = "<group>"; };
 		E833DF331E0DD586006438C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E833DF3E1E0DD5D8006438C4 /* BlipPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlipPadView.swift; sourceTree = "<group>"; };
+		E833DF3E1E0DD5D8006438C4 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		E8EDEC421E86E06900E8A4C4 /* Blip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blip.swift; sourceTree = "<group>"; };
+		E8EDEC451E86E0E800E8A4C4 /* SynthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
+		E8EDEC471E86E41100E8A4C4 /* BlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlipView.swift; sourceTree = "<group>"; };
+		E8EDEC491E86E4F600E8A4C4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				E833DF1C1E0DD586006438C4 /* AppDelegate.swift */,
-				E833DF3E1E0DD5D8006438C4 /* BlipPadView.swift */,
-				E833DF1E1E0DD586006438C4 /* MainViewController.swift */,
+				E8EDEC441E86E06D00E8A4C4 /* Model */,
+				E8EDEC411E86E05900E8A4C4 /* View */,
+				E8EDEC4B1E86E63E00E8A4C4 /* Controllers */,
 				E833DF231E0DD586006438C4 /* Assets.xcassets */,
 				E833DF251E0DD586006438C4 /* LaunchScreen.storyboard */,
 				E833DF281E0DD586006438C4 /* Info.plist */,
+				E8EDEC491E86E4F600E8A4C4 /* Colors.swift */,
 			);
 			path = Bliptronic5000;
 			sourceTree = "<group>";
@@ -118,6 +128,32 @@
 				E833DF331E0DD586006438C4 /* Info.plist */,
 			);
 			path = Bliptronic5000Tests;
+			sourceTree = "<group>";
+		};
+		E8EDEC411E86E05900E8A4C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8EDEC471E86E41100E8A4C4 /* BlipView.swift */,
+				E8EDEC451E86E0E800E8A4C4 /* SynthView.swift */,
+				E833DF3E1E0DD5D8006438C4 /* MainScreenView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E8EDEC441E86E06D00E8A4C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8EDEC421E86E06900E8A4C4 /* Blip.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E8EDEC4B1E86E63E00E8A4C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E833DF1E1E0DD586006438C4 /* MainViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EDEC431E86E06900E8A4C4 /* Blip.swift in Sources */,
+				E8EDEC461E86E0E800E8A4C4 /* SynthView.swift in Sources */,
 				E833DF1F1E0DD586006438C4 /* MainViewController.swift in Sources */,
+				E8EDEC4A1E86E4F600E8A4C4 /* Colors.swift in Sources */,
 				E833DF1D1E0DD586006438C4 /* AppDelegate.swift in Sources */,
-				E833DF3F1E0DD5D8006438C4 /* BlipPadView.swift in Sources */,
+				E833DF3F1E0DD5D8006438C4 /* MainScreenView.swift in Sources */,
+				E8EDEC481E86E41100E8A4C4 /* BlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
