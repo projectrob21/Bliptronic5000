@@ -8,6 +8,7 @@ target 'Bliptronic5000' do
   # Pods for Bliptronic5000
 
   pod 'SnapKit', '~> 3.0'
+  pod 'AudioKit', '~> 3.5'
 
   end
 
